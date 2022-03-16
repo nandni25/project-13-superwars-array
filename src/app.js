@@ -23,23 +23,23 @@ const PLAYERS = [
 
 
 // initialize players with image and strength
-// const initPlayers = (players) => {
-//     let detailedPlayers = '';
+const initPlayers = (players) => {
+    let detailedPlayers = '';
 
-//     // Instead of forloop use Map method
-//     // Code here
-//     detailedPlayers= players.map(function(item,index,arr){
-//         arr = {
-//             name:item,
-//             image: "images/super-" + (index) + ".png",
-//             strength: getRandomStrength(),
-//             type: (index % 2 == 0) ? "hero" : "villain"
-//         }
-//         return arr;
-//     });
+    // Instead of forloop use Map method
+    // Code here
+    detailedPlayers= players.map(function(item,index,arr){
+        arr = {
+            name:item,
+            image: "images/super-" + (index) + ".png",
+            strength: getRandomStrength(),
+            type: (index % 2 == 0) ? "hero" : "villain"
+        }
+        return arr;
+    });
 
-//     return detailedPlayers;
-// }
+    return detailedPlayers;
+}
 
 // getting random strength
 const getRandomStrength = () => {
@@ -81,6 +81,6 @@ const viewPlayers = (players) => {
 }
 
 
-// window.onload = () => {
-//     viewPlayers(initPlayers(PLAYERS));
-// }
+window.onload = () => {
+    viewPlayers(initPlayers(PLAYERS));
+}
